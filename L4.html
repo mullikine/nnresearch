@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-03-27 Tue 02:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="shane" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgc0627da">1. <span class="todo TODO">TODO</span> Read this before next lecture</a></li>
+<li><a href="#org4b097f5">2. Alternative Reading</a></li>
+<li><a href="#org8f345db">3. Ambiguous</a></li>
+<li><a href="#orgbc35983">4. Official Terms</a></li>
+<li><a href="#orge4947dc">5. Field</a></li>
+<li><a href="#orgdde2421">6. Terms</a></li>
+<li><a href="#orge36e4f7">7. Definitions</a></li>
+<li><a href="#org4526c86">8. Annotations</a></li>
+<li><a href="#orgc7d1dcb">9. Math</a>
+<ul>
+<li><a href="#org5123e5f">9.1. x ∈ Rn</a></li>
+<li><a href="#org6719f61">9.2. f:Rn→ {1, &#x2026;, k}</a>
+<ul>
+<li><a href="#org34654da">9.2.1. y=f(x)</a></li>
+</ul>
+</li>
+<li><a href="#org6b13c52">9.3. f:Rn→ R</a></li>
+</ul>
+</li>
+<li><a href="#orgdd5affc">10. Notes</a>
+<ul>
+<li><a href="#orga6809a3">10.1. Challenges</a></li>
+<li><a href="#org952bce4">10.2. Two central approaches to statistics:</a></li>
+<li><a href="#orgee0fe75">10.3. Most ML alg fall under</a></li>
+<li><a href="#org8bca9e4">10.4. Most DL alg are based on SGD</a>
+<ul>
+<li><a href="#orgcd79128">10.4.1. Combine various alg compponents to build an ML alg.</a></li>
+<li><a href="#org4df9abb">10.4.2. Factors that have limited the ability of TML to generalise.</a></li>
+</ul>
+</li>
+<li><a href="#org0828254">10.5. Learning Alg</a></li>
+<li><a href="#org11353f8">10.6. pm, P</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc0627da" class="outline-2">
+<h2 id="orgc0627da"><span class="section-number-2">1</span> <span class="todo TODO">TODO</span> Read this before next lecture</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<a href="http://www.deeplearningbook.org/contents/ml.html">DL Book: Machine Learning Basics</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b097f5" class="outline-2">
+<h2 id="org4b097f5"><span class="section-number-2">2</span> Alternative Reading</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<a href="https://frnsys.com/ai_notes/machine_learning/supervised_learning.html">Supervised Learning</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8f345db" class="outline-2">
+<h2 id="org8f345db"><span class="section-number-2">3</span> Ambiguous</h2>
+<div class="outline-text-2" id="text-3">
+<ol class="org-ol">
+<li><b>PoS</b> :: Proof of Stake</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgbc35983" class="outline-2">
+<h2 id="orgbc35983"><span class="section-number-2">4</span> Official Terms</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li>P :: Performance Measure (pm)</li>
+<li>T :: Task</li>
+<li>E :: Experience</li>
+<li>p<sub>data</sub> : Data-generating Distribution (Dgd)</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge4947dc" class="outline-2">
+<h2 id="orge4947dc"><span class="section-number-2">5</span> Field</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li>SLT :: Statistical Learning Theory</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgdde2421" class="outline-2">
+<h2 id="orgdde2421"><span class="section-number-2">6</span> Terms</h2>
+<div class="outline-text-2" id="text-6">
+<ol class="org-ol">
+<li>LR :: Linear Regression</li>
+<li>TML :: Traditional ML.</li>
+<li>ML :: Machine Learning</li>
+<li>hP :: Hyperparameters</li>
+<li>alg :: Algorithms</li>
+<li>LA / lAlg :: Learning Algorithm</li>
+<li>SGD :: Stochastic gradient descent</li>
+<li>f / fn :: function</li>
+<li>ds :: dataset</li>
+<li>Cls :: Classification</li>
+<li>ClsM :: Classification with missing inputs</li>
+<li>Rgr :: Regression</li>
+<li>Tr :: Transcription</li>
+<li>Tl / MTl :: Machine Translation</li>
+<li>S :: Supervised Learning</li>
+<li>uS :: Unsupervised Learning</li>
+<li>sS :: Semi-supervised Learning</li>
+<li>RL :: Reinforcement Learning</li>
+<li>OCR :: Optical Character Recognition</li>
+<li>ObjR :: Object Recognition</li>
+<li>s-o :: Structured Output</li>
+<li>PoS :: Parts of Speech</li>
+<li>AD :: Anomaly Detection</li>
+<li>S+S :: Synthesis and Sampling</li>
+<li>IMV :: Imputation of Missing Values</li>
+<li>dN :: Denoising</li>
+<li>pmf :: Probability Mass Function</li>
+<li>DE / pmfE :: Density Estimation / pmf estimation</li>
+<li>pm :: Performance measure</li>
+<li>dgm :: design matrix</li>
+<li>MSE :: Mean Squared Error</li>
+<li>NEq :: Normal Equations</li>
+<li>Cap :: Capacity</li>
+<li>RCap :: Representational Capacity</li>
+<li>oF :: Overfitting</li>
+<li>uF :: Underfitting</li>
+<li>Dgp :: Data-generating Process</li>
+<li>IID :: I.I.D. Assumptions</li>
+<li>iDi :: Identically Distributed</li>
+<li>M :: Model</li>
+<li>MSel :: Model Selection</li>
+<li>pd :: Probability Distribution</li>
+<li>p<sub>data</sub> / Dgd :: Data-generating Distribution</li>
+<li>HS :: Hypothesis Space</li>
+<li>npM :: Nonparametric Models</li>
+<li>NNR :: Nearest Neighbor Regression</li>
+<li>Ol :: Oracle</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge36e4f7" class="outline-2">
+<h2 id="orge36e4f7"><span class="section-number-2">7</span> Definitions</h2>
+<div class="outline-text-2" id="text-7">
+<ol class="org-ol">
+<li>GD / SGD :: An optimisation algorithm</li>
+<li>ML Alg :: Alg that can learn from data.</li>
+<li>Learning :: A computer program is said to learn from experience E with respect to someclass of tasks T and performance measure P, if its performance at tasks in T, asmeasured by P, improves with experience E.
+Learning is not the task.</li>
+<li>dgm :: feature (col) vs example (row)</li>
+<li>IID
+<ul class="org-ul">
+<li>The examples in the dataset are:
+<ol class="org-ol">
+<li>Independent</li>
+<li>iDi (drawn from the same pd)</li>
+</ol></li>
+</ul></li>
+<li>Capacity :: the flexibility of a model - that is, the variety of functions it can fit.
+<ol class="org-ol">
+<li>RCap :: the functions which the model can learn
+<ul class="org-ul">
+<li>Choice of M partially determines its cap, like genetics, but there are many ways to change a M's cap.</li>
+<li>The M specifies which family of fn the LA can choose from when varying the parameters in order to reduce a training objective.</li>
+</ul></li>
+<li>Effective capacity :: in practice, a learning algorithm is not likely to find the best function out of the possible functions it can learn, though it can learn one that performs exceptionally well - those functions that the learning algorithm is capable of finding defines the model's effective capacity.</li>
+</ol></li>
+<li>HS :: the set of functions the model is limited to learning. For instance, linear regression can be limited to linear functions as its hypothesis space, or it can be expanded to learn polynomials as well, e.g. by introducing an x2 term.</li>
+<li>hP :: a parameter of a model that is not learned (that is, you specify it yourself)</li>
+<li>uF :: when the model could achieve better generalization with more training or capacity. Characterized by a high training error.</li>
+<li>oF :: when the model could achieve better generalization with more training or capacity; in particular, the model is too tuned to the idiosyncrasies of the training data (for instance, it may fit to sampling error, which we don't want). Too much capacity can lead to overfitting in that the model may be able to learn functions too specific to the data. Characterized by a large gap between the training error and the test error.</li>
+<li>MSel :: the process of choosing the best hyperparameters on a validation set</li>
+<li>pM :: Learn a function described by a parameter vector whose size is finite and fixed before any data is observed.
+Examples:
+<ol class="org-ol">
+<li>linear regression</li>
+</ol></li>
+<li>npM :: No such limitation
+       To reach the most extreme case of arbitrarily high capacity.
+Example, NNR nearest neighbor regression.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org4526c86" class="outline-2">
+<h2 id="org4526c86"><span class="section-number-2">8</span> Annotations</h2>
+<div class="outline-text-2" id="text-8">
+<ol class="org-ol">
+<li>ML
+<ul class="org-ul">
+<li>A form of applied statistics.
+<ul class="org-ul">
+<li>Increased emphasis on the use of computers to statistically estimate complicated functions.</li>
+<li>Decreased emphasison proving conﬁdence intervals around these functions.</li>
+</ul></li>
+</ul></li>
+<li>LR
+<ul class="org-ul">
+<li>Solves a regression problem.</li>
+</ul></li>
+<li>Cap
+<ul class="org-ul">
+<li>Can control whether a model is more likely to overfit or underfit by altering this.</li>
+<li>Informally, a M ability to fit a wide variety of functions.</li>
+<li>M w/ Low cap may struggle to fit the training set.</li>
+<li>M w/ high cap can overfit by memorizing properties of the training set that do not serve them well on the test set.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgc7d1dcb" class="outline-2">
+<h2 id="orgc7d1dcb"><span class="section-number-2">9</span> Math</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org5123e5f" class="outline-3">
+<h3 id="org5123e5f"><span class="section-number-3">9.1</span> x ∈ Rn</h3>
+<div class="outline-text-3" id="text-9-1">
+<dl class="org-dl">
+<dt>x</dt><dd>an example / vector&lt;features&gt;</dd>
+<dt>x<sub>i</sub></dt><dd>a feature of the example</dd>
+<dt>Rn</dt><dd>a collection of examples.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org6719f61" class="outline-3">
+<h3 id="org6719f61"><span class="section-number-3">9.2</span> f:Rn→ {1, &#x2026;, k}</h3>
+<div class="outline-text-3" id="text-9-2">
+<p>
+Cls fn
+</p>
+</div>
+
+<div id="outline-container-org34654da" class="outline-4">
+<h4 id="org34654da"><span class="section-number-4">9.2.1</span> y=f(x)</h4>
+<div class="outline-text-4" id="text-9-2-1">
+<p>
+The model assigns an input described by vector x to a category identified by numeric code y.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6b13c52" class="outline-3">
+<h3 id="org6b13c52"><span class="section-number-3">9.3</span> f:Rn→ R</h3>
+<div class="outline-text-3" id="text-9-3">
+<p>
+Similar to classification, except that the format of output is different.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdd5affc" class="outline-2">
+<h2 id="orgdd5affc"><span class="section-number-2">10</span> Notes</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-orga6809a3" class="outline-3">
+<h3 id="orga6809a3"><span class="section-number-3">10.1</span> Challenges</h3>
+<div class="outline-text-3" id="text-10-1">
+<ol class="org-ol">
+<li>fitting the training data</li>
+<li>finding patterns that generalize to new data</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org952bce4" class="outline-3">
+<h3 id="org952bce4"><span class="section-number-3">10.2</span> Two central approaches to statistics:</h3>
+<div class="outline-text-3" id="text-10-2">
+<ol class="org-ol">
+<li>Frequentist estimators.</li>
+<li>Bayesian inference.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgee0fe75" class="outline-3">
+<h3 id="orgee0fe75"><span class="section-number-3">10.3</span> Most ML alg fall under</h3>
+<div class="outline-text-3" id="text-10-3">
+<ol class="org-ol">
+<li>S Learning</li>
+<li>uS Learning</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org8bca9e4" class="outline-3">
+<h3 id="org8bca9e4"><span class="section-number-3">10.4</span> Most DL alg are based on SGD</h3>
+<div class="outline-text-3" id="text-10-4">
+</div>
+<div id="outline-container-orgcd79128" class="outline-4">
+<h4 id="orgcd79128"><span class="section-number-4">10.4.1</span> Combine various alg compponents to build an ML alg.</h4>
+<div class="outline-text-4" id="text-10-4-1">
+<ol class="org-ol">
+<li>Optimisation alg</li>
+<li>Cost f</li>
+<li>M</li>
+<li>ds</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org4df9abb" class="outline-4">
+<h4 id="org4df9abb"><span class="section-number-4">10.4.2</span> Factors that have limited the ability of TML to generalise.</h4>
+<div class="outline-text-4" id="text-10-4-2">
+<ol class="org-ol">
+<li>?</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0828254" class="outline-3">
+<h3 id="org0828254"><span class="section-number-3">10.5</span> Learning Alg</h3>
+<div class="outline-text-3" id="text-10-5">
+<ol class="org-ol">
+<li>Cls
+<ul class="org-ul">
+<li>alg produces a fn:</li>
+<li>f:Rn→ {1, &#x2026;, k}</li>
+<li>Modern ObjR uses DL.</li>
+</ul></li>
+
+<li>ClsM
+<ul class="org-ul">
+<li>More challenging if the computer program is not guaranteed that every measurement inits input vector will always be provided.</li>
+</ul></li>
+
+<li>Rgr
+<ul class="org-ul">
+<li>Predict a numerical value given some input.</li>
+</ul></li>
+
+<li>Tr
+<ul class="org-ul">
+<li>ML system is asked to observe a relatively unstructured representation of some kind of data and transcribe the information into discrete textual form.</li>
+
+<li id="OCR">Street View uses DL on OCR for address numbers.</li>
+<li id="Speech recognition">Word ID codes from audio. DL is crucial.</li>
+</ul></li>
+
+<li>Tl
+<ul class="org-ul">
+<li>Input already consists of a sequence of symbols in some language, and the computer program must convert this into a sequence of symbols in another language.</li>
+<li>Commonly applied to natural languages, such as translating from English to French.</li>
+<li>DL has recently begun to have an important impact on this kind of task.</li>
+</ul></li>
+
+<li>s-o
+<ul class="org-ul">
+<li>A broad category including the Tr and Tl tasks above and more.</li>
+<li id="Parsing">Mapping NL sentence into a POS tree.</li>
+</ul></li>
+
+<li>AD</li>
+<li>S+S</li>
+<li>IMV</li>
+<li>dN</li>
+<li>DE / pmfE</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org11353f8" class="outline-3">
+<h3 id="org11353f8"><span class="section-number-3">10.6</span> pm, P</h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: shane</p>
+<p class="date">Created: 2018-03-27 Tue 02:41</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

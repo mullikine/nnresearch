@@ -2,41 +2,109 @@
 DEADLINE: <2018-03-27 Tue>
 [[http://www.deeplearningbook.org/contents/ml.html][DL Book: Machine Learning Basics]]
 
+* Alternative Reading
+[[https://frnsys.com/ai_notes/machine_learning/supervised_learning.html][Supervised Learning]]
+
 * Ambiguous
 1. *PoS* :: Proof of Stake
 
+* Official Terms
+1. P :: Performance Measure (pm)
+2. T :: Task
+3. E :: Experience
+4. p_data : Data-generating Distribution (Dgd)
+
+* Field
+1. SLT :: Statistical Learning Theory
+
 * Terms
-1. Linear Regression ::
+1. LR :: Linear Regression
 2. TML :: Traditional ML.
 3. ML :: Machine Learning
-4. HP :: Hyperparameters
+4. hP :: Hyperparameters
 5. alg :: Algorithms
-6. SGD :: Stochastic gradient descent
-7. f / fn :: function
-8. ds :: dataset
-9. Cls :: Classification
-10. ClsM :: Classification with missing inputs
-11. Rgr :: Regression
-12. Tr :: Transcription
-13. Tl / MTl :: Machine Translation
-14. S :: Supervised Learning
-15. uS :: Unsupervised Learning
-16. OCR :: Optical Character Recognition
-17. ObjR :: Object Recognition
-18. s-o :: Structured Output
-19. PoS :: Parts of Speech
+6. LA / lAlg :: Learning Algorithm
+7. SGD :: Stochastic gradient descent
+8. f / fn :: function
+9. ds :: dataset
+10. Cls :: Classification
+11. ClsM :: Classification with missing inputs
+12. Rgr :: Regression
+13. Tr :: Transcription
+14. Tl / MTl :: Machine Translation
+15. S :: Supervised Learning
+16. uS :: Unsupervised Learning
+17. sS :: Semi-supervised Learning
+18. RL :: Reinforcement Learning
+19. OCR :: Optical Character Recognition
+20. ObjR :: Object Recognition
+21. s-o :: Structured Output
+22. PoS :: Parts of Speech
+23. AD :: Anomaly Detection
+24. S+S :: Synthesis and Sampling
+25. IMV :: Imputation of Missing Values
+26. dN :: Denoising
+27. pmf :: Probability Mass Function
+28. DE / pmfE :: Density Estimation / pmf estimation
+29. pm :: Performance measure
+30. dgm :: design matrix
+31. MSE :: Mean Squared Error
+32. NEq :: Normal Equations
+33. Cap :: Capacity
+34. RCap :: Representational Capacity
+35. oF :: Overfitting
+36. uF :: Underfitting
+37. Dgp :: Data-generating Process
+38. IID :: I.I.D. Assumptions
+39. iDi :: Identically Distributed
+40. M :: Model
+41. MSel :: Model Selection
+42. pd :: Probability Distribution
+43. p_data / Dgd :: Data-generating Distribution
+44. HS :: Hypothesis Space
+45. npM :: Nonparametric Models
+46. NNR :: Nearest Neighbor Regression
+47. Ol :: Oracle
 
 * Definitions
 1. GD / SGD :: An optimisation algorithm
 2. ML Alg :: Alg that can learn from data.
 3. Learning :: A computer program is said to learn from experience E with respect to someclass of tasks T and performance measure P, if its performance at tasks in T, asmeasured by P, improves with experience E.
                Learning is not the task.
+4. dgm :: feature (col) vs example (row)
+5. IID
+   - The examples in the dataset are:
+     1. Independent
+     2. iDi (drawn from the same pd)
+6. Capacity :: the flexibility of a model - that is, the variety of functions it can fit.
+   1. RCap :: the functions which the model can learn
+      - Choice of M partially determines its cap, like genetics, but there are many ways to change a M's cap.
+      - The M specifies which family of fn the LA can choose from when varying the parameters in order to reduce a training objective.
+   2. Effective capacity :: in practice, a learning algorithm is not likely to find the best function out of the possible functions it can learn, though it can learn one that performs exceptionally well - those functions that the learning algorithm is capable of finding defines the model's effective capacity.
+7. HS :: the set of functions the model is limited to learning. For instance, linear regression can be limited to linear functions as its hypothesis space, or it can be expanded to learn polynomials as well, e.g. by introducing an x2 term.
+8. hP :: a parameter of a model that is not learned (that is, you specify it yourself)
+9. uF :: when the model could achieve better generalization with more training or capacity. Characterized by a high training error.
+10. oF :: when the model could achieve better generalization with more training or capacity; in particular, the model is too tuned to the idiosyncrasies of the training data (for instance, it may fit to sampling error, which we don't want). Too much capacity can lead to overfitting in that the model may be able to learn functions too specific to the data. Characterized by a large gap between the training error and the test error.
+11. MSel :: the process of choosing the best hyperparameters on a validation set
+12. pM :: Learn a function described by a parameter vector whose size is finite and fixed before any data is observed.
+    Examples:
+    1. linear regression
+13. npM :: No such limitation
+           To reach the most extreme case of arbitrarily high capacity.
+    Example, NNR nearest neighbor regression.
 
 * Annotations
 1. ML
    + A form of applied statistics.
      + Increased emphasis on the use of computers to statistically estimate complicated functions.
      + Decreased emphasison proving conﬁdence intervals around these functions.
+2. LR
+   - Solves a regression problem.
+3. Cap
+   + Can control whether a model is more likely to overfit or underfit by altering this.
+   + Informally, a M ability to fit a wide variety of functions.
+   + M w/ Low cap may struggle to fit the training set.
+   + M w/ high cap can overfit by memorizing properties of the training set that do not serve them well on the test set.
 
 * Math
 ** x ∈ Rn
@@ -72,7 +140,7 @@ Similar to classification, except that the format of output is different.
 *** Combine various alg compponents to build an ML alg.
 1. Optimisation alg
 2. Cost f
-3. Model
+3. M
 4. ds
 
 *** Factors that have limited the ability of TML to generalise.
@@ -93,8 +161,8 @@ Similar to classification, except that the format of output is different.
 4. Tr
    - ML system is asked to observe a relatively unstructured representation of some kind of data and transcribe the information into discrete textual form.
 
-   + OCR :: Street View uses DL on OCR for address numbers.
-   + Speech recognition :: Word ID codes from audio. DL is crucial.
+   - OCR :: Street View uses DL on OCR for address numbers.
+   - Speech recognition :: Word ID codes from audio. DL is crucial.
 
 5. Tl
    - Input already consists of a sequence of symbols in some language, and the computer program must convert this into a sequence of symbols in another language.
@@ -103,4 +171,12 @@ Similar to classification, except that the format of output is different.
 
 6. s-o
    - A broad category including the Tr and Tl tasks above and more.
-   + Parsing :: Mapping NL sentence into a POS tree.
+   - Parsing :: Mapping NL sentence into a POS tree.
+
+7. AD
+8. S+S
+9. IMV
+10. dN
+11. DE / pmfE
+  
+** pm, P
