@@ -1,0 +1,7 @@
+* Neural Networks notes
+** Lectures
+1. [[/home/shane/notes2018/uni/cosc/420_Neural Networks_S1/lectures/L1.org][L1.org]]
+2. [[/home/shane/notes2018/uni/cosc/420_Neural Networks_S1/lectures/L02.org][L02.org]]
+3. [[/home/shane/notes2018/uni/cosc/420_Neural Networks_S1/lectures/L3.org][L3.org]]
+4. [[L4.org][L4.org]]
+5. [[/home/shane/notes2018/uni/cosc/420_Neural Networks_S1/lectures/chap-10.org][chap-10.org]]

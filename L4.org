@@ -1,0 +1,106 @@
+* TODO [#B] Read this before next lecture
+DEADLINE: <2018-03-27 Tue>
+[[http://www.deeplearningbook.org/contents/ml.html][DL Book: Machine Learning Basics]]
+
+* Ambiguous
+1. *PoS* :: Proof of Stake
+
+* Terms
+1. Linear Regression ::
+2. TML :: Traditional ML.
+3. ML :: Machine Learning
+4. HP :: Hyperparameters
+5. alg :: Algorithms
+6. SGD :: Stochastic gradient descent
+7. f / fn :: function
+8. ds :: dataset
+9. Cls :: Classification
+10. ClsM :: Classification with missing inputs
+11. Rgr :: Regression
+12. Tr :: Transcription
+13. Tl / MTl :: Machine Translation
+14. S :: Supervised Learning
+15. uS :: Unsupervised Learning
+16. OCR :: Optical Character Recognition
+17. ObjR :: Object Recognition
+18. s-o :: Structured Output
+19. PoS :: Parts of Speech
+
+* Definitions
+1. GD / SGD :: An optimisation algorithm
+2. ML Alg :: Alg that can learn from data.
+3. Learning :: A computer program is said to learn from experience E with respect to someclass of tasks T and performance measure P, if its performance at tasks in T, asmeasured by P, improves with experience E.
+               Learning is not the task.
+
+* Annotations
+1. ML
+   + A form of applied statistics.
+     + Increased emphasis on the use of computers to statistically estimate complicated functions.
+     + Decreased emphasison proving conﬁdence intervals around these functions.
+
+* Math
+** x ∈ Rn
++ x :: an example / vector<features>
++ x_i :: a feature of the example
++ Rn :: a collection of examples.
+
+** f:Rn→ {1, ..., k}
+
+Cls fn
+
+*** y=f(x)
+The model assigns an input described by vector x to a category identified by numeric code y.
+
+** f:Rn→ R
+
+Similar to classification, except that the format of output is different.
+
+* Notes
+** Challenges
+1. fitting the training data
+2. finding patterns that generalize to new data
+
+** Two central approaches to statistics:
+1. Frequentist estimators.
+2. Bayesian inference.
+
+** Most ML alg fall under
+1. S Learning
+2. uS Learning
+
+** Most DL alg are based on SGD
+*** Combine various alg compponents to build an ML alg.
+1. Optimisation alg
+2. Cost f
+3. Model
+4. ds
+
+*** Factors that have limited the ability of TML to generalise.
+1. ?
+
+** Learning Alg
+1. Cls
+   - alg produces a fn:
+   - f:Rn→ {1, ..., k}
+   - Modern ObjR uses DL.
+
+2. ClsM
+   - More challenging if the computer program is not guaranteed that every measurement inits input vector will always be provided.
+
+3. Rgr
+   - Predict a numerical value given some input.
+
+4. Tr
+   - ML system is asked to observe a relatively unstructured representation of some kind of data and transcribe the information into discrete textual form.
+
+   + OCR :: Street View uses DL on OCR for address numbers.
+   + Speech recognition :: Word ID codes from audio. DL is crucial.
+
+5. Tl
+   - Input already consists of a sequence of symbols in some language, and the computer program must convert this into a sequence of symbols in another language.
+   - Commonly applied to natural languages, such as translating from English to French.
+   - DL has recently begun to have an important impact on this kind of task.
+
+6. s-o
+   - A broad category including the Tr and Tl tasks above and more.
+   + Parsing :: Mapping NL sentence into a POS tree.
