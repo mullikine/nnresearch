@@ -47,24 +47,28 @@ DEADLINE: <2018-03-27 Tue>
 27. pmf :: Probability Mass Function
 28. DE / pmfE :: Density Estimation / pmf estimation
 29. pm :: Performance measure
-30. dgm :: design matrix
-31. MSE :: Mean Squared Error
-32. NEq :: Normal Equations
-33. Cap :: Capacity
-34. RCap :: Representational Capacity
-35. oF :: Overfitting
-36. uF :: Underfitting
-37. Dgp :: Data-generating Process
-38. IID :: I.I.D. Assumptions
-39. iDi :: Identically Distributed
-40. M :: Model
-41. MSel :: Model Selection
-42. pd :: Probability Distribution
-43. p_data / Dgd :: Data-generating Distribution
-44. HS :: Hypothesis Space
-45. npM :: Nonparametric Models
-46. NNR :: Nearest Neighbor Regression
-47. Ol :: Oracle
+30. pc :: Policy
+31. dgm :: design matrix
+32. MSE :: Mean Squared Error
+33. NEq :: Normal Equations
+34. Cap :: Capacity
+35. RCap :: Representational Capacity
+36. oF :: Overfitting
+37. uF :: Underfitting
+38. Dgp :: Data-generating Process
+39. IID :: I.I.D. Assumptions
+40. iDi :: Identically Distributed
+41. M :: Model
+42. MSel :: Model Selection
+43. pd :: Probability Distribution
+44. p_data / Dgd :: Data-generating Distribution
+45. HS :: Hypothesis Space
+46. npM :: Nonparametric Models
+47. NNR :: Nearest Neighbor Regression
+48. Ol :: Oracle
+49. PE :: Point Estimation
+50. rFB :: Recurrent feedback
+51. RN / RNN :: Recurrent Network / Recurrent Neural Network
 
 * Definitions
 1. GD / SGD :: An optimisation algorithm
@@ -92,6 +96,9 @@ DEADLINE: <2018-03-27 Tue>
 13. npM :: No such limitation
            To reach the most extreme case of arbitrarily high capacity.
     Example, NNR nearest neighbor regression.
+14. PE :: The attempt to provide the single "best" prediction of some quantity of interest.
+          In general the quantity of interest can be a single parameteror a vector of parameters in some parametric model, such as the weights in our linear regression example in section 5.1.4, but it can also be a whole function.
+15. hP :: settings that we can use to control the algorithm's behavior.
 
 * Annotations
 1. ML

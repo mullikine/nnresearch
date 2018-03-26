@@ -1,0 +1,136 @@
+bias -- error you make because ofr your initial assumptions.
+variance :: error 
+
+penalty called aregularizerto the cost function. In the case of weightdecay, the regularizer is Ω(w) =ww.
+
+overﬁt or underﬁtvia weight decay
+
+No free lunch theorem has made it clear that there is no best machinelearning algorithm, and, in particular, no best form of regularization
+
+*** Regularization :: any modiﬁcation we make to alearning algorithm that is intended to reduce its generalization error but not itstraining error.
+A punishment on complexity. Tries to simplify things.
+
+Types:
+**** Weight decay
+**** Noise
+
+*** Bias and variance measure two diﬀerent sources of error in an estimator. Biasmeasures the expected deviation from the true value of the function or parameter.Variance on the other hand, provides a measure of the deviation from the expectedestimator value that any particular sampling of the data is likely to cause.
+
+The variance, or the standard error, of an estimator provides a measure of howwe would expect the estimate we compute from data to vary as we independentlyresample the dataset from the underlying data-generating process. Just as wemight like an estimator to exhibit low bias, we would also like it to have relativelylow variance.
+
+*** Chapter 7 -- other regularization terms you can use in your NN training.
+
+
+Learning algorithms give us representational capacity.
+
+In the space of all possible worlds, learning is impossible, but we live in the real world.
+
+** more notes
+
+reading appendix C
+pc
+RL
+
+
+change the NN into a representation you understand.
+
+
+Difference:
+*** clamped [an input]
+*** initial state (setting an input)
+
+** 
+when you give an input, what did you actually do? did you clamp?
+
+count layers of weights?
+a single layer of modifyable weights is not very powerful...
+
+layers of units 
+
+terms
+- ply
+
+hidden units:
+set their own representations
+
+we can have NN where units are not hidden in architectural sense but they are hidden in the functional sense (not specified functionally).
+
+
+** Time and Sequence tasks
+
+networks of states.
+no control over intermediate sequence.
+
+need recurrent architectures
+
+
+*** Early work
+sequence reproduction
+
+learn sequence abcd, then when i give you a, produce other outputs in order. reproduce the sequence
+
+problem with repeated outputs as trianing items.
+weights will keep thrashing around, being driven by high error.
+
+early attempts to get around this problem were more sophisticated encodings.
+instead of more simple representations, talk about preceded by and followed by... use a richer encoding for more context.
+exactly the same problem. There is a combinatorial issue too.
+
+
+jordan's sequential network
+
+*** RNN
++ ABCBO :: sequence
+RNN can anticipate where they are going. A representation of B could depend on what's coming after B, like a skilled typist, who choses the finger to hit the key based on future keys that will be pressed.
+
+*** Blurring activation function in context units can help model schizophrenia.
+
+*** RNN :: Any unit can go through a path of connections back to itself, then we have recurrence in the network. Sloppy definition, anything can be connected to anything.
+Sequence networks have very simple recurrence (they are connected directly with themselves).
+
+
+Even simple RNNs can exhibit full chaotic behavior (bifurcation etc...)
+
+Next lecture, L6:
+Hopfield networks are guaranteed to reach a stable state, if the connections are symmetric.
+
+*** Useful forms of rFB
+
+when you have rFB, take account of feedback in your calculation.
+Control complex, non-linear systems like chemical plants and autopilots (anything that needs feedback).
+
+*** Learn a trajectory that does a figure 8.
+
+** How do we train the thing (RN)
+
+*** Backprop type learning:
+Can learn with just the basic backprop alg.
+Needs to keep a stack of its previous activation/learning states.
+Memory intensive and not biologically plausible.
+
+*** Unfolding in time:
+In practice, it's easier to unfold them over time.
+Turns network over time into network over space.
+
+The only thing we have to be careful of is we accumulate the weight changes at different layers of the weight and apply it to all copies of the weight (all representations on all layers).
+
+Therefore, backprop alg can be used on a NN that has been unfolded in time.
+
+Take RN, unfold it, then do ordinary backprop with a little fiddly stuff about making sure all copies of the same weight keep the same value.
+
+*** plenty of different alg for learning of RN. They have a non-locality cost, but not a weight locking cost. So it's a tradeoff.
+
+You can unfold any RNN into a FFN.
+
+There is an equivalent FFN over a equivalent ... in time steps.
+
+* banter
+Parabolic estimators of the whole error surface.
+Conjugate radient methods.
+
+** 
+
+
+** Reading
+http://suriyadeepan.github.io/2017-01-07-unfolding-rnn/
+And the references at the bottom of this.
